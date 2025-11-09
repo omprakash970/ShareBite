@@ -86,6 +86,33 @@
         transition: all 0.3s;
       }
 
+      /* Back to home button (left side) */
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: none;
+        border: 1px solid var(--input-border-light);
+        color: var(--text-color-light);
+        padding: 0.45rem 0.8rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.25s;
+      }
+
+      .back-button:hover {
+        transform: translateY(-2px);
+        border-color: var(--primary-green);
+        color: var(--primary-green);
+      }
+
+      body.dark-mode .back-button {
+        border-color: var(--input-border-dark);
+        color: var(--text-color-dark);
+      }
+
       body.dark-mode .theme-toggle {
         border-color: var(--input-border-dark);
         color: var(--text-color-dark);
@@ -299,6 +326,7 @@
     </style>
   </head>
   <body>
+    <a href="index.html" class="back-button" title="Back to Home">← Home</a>
     <button id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
       🌙
     </button>
